@@ -18,6 +18,10 @@ Algorithme de regression linéaire (préduction des ventes futures des produits)
 Prototype d’un modèle 3D du produit developpe dans le cadre du formation
 Affichage de la localisation du lieu de formation sur une carte interactive.
 Système de prédiction permettant d’évaluer si la formation correspond ou non aux besoins du client.
+Affichage de la localisation du lieu de l’évènement sur une carte interactive.
+Affichage de la météo d’aujourd’hui et prévision de la météo du 1er jour de l’évènement.
+Dashboard interactive et dynamique même style qu’une Dashboard Power Bi.
+
 
 
 # Fonctionnalités de sécurité :
@@ -45,19 +49,33 @@ Affichage des produits sous forme d’un store avec different choix de filtrage
 Exportation des commande en pdf(inclus prix HT,statut coloré,qr code)
 Suivi des ventes et chiffre d’affaires via statistique interactives
 Preduction des ventes
+
 Gestion des formations/certificats :
 CRUD pour les formations et les certificats
 Affichage des formations sous forme de catalogue avec filtres par catégorie, durée ou niveau
-Génération des certificats en PDF (inclus nom du participant, titre de la formation, QR code de vérification)
+Génération des certificats en PDF (inclus nom du participant, titre de la formation)
 Suivi des inscriptions et taux de réussite via des statistiques interactives
 Système de recommandation prédictif pour suggérer les formations adaptées au profil de l'utilisateur
+
+Gestion des Evenements/Dons :
+
+Crud pour les Evenements et les Dons.
+Affichage des Evenements sous forme de grille avec progression bar, filtrage, Tri et recherche dynamique
+Affichage de progrssion des dons par rapport à l’objectif avec des statistiques.
+
+Gestion des Creation/Commentaire
+
+Génération d’œuvres via formulaire ou import direct, prévisualisation en temps réel, prise en charge des fichiers multimédias (image, audio, vidéo), assignation à une catégorie existante, détection automatique du type de contenu, gestion des métadonnées (titre, description, tags), sauvegarde en brouillon ou publication immédiate, et attribution automatique à l’utilisateur connecté.
+
+
+
 
 
 # Principales fonctionnalités
 
 GESTION DES UTILISATEURS : Inscription avec e-mail de bienvenue, connexion via Face ID (serveur Flask), Google OAuth, ou mot de passe, déconnexion, espace personnel avec détails, gestion des sessions (JWT), 2FA, et réinitialisation de mot de passe par e-mail.
 GESTION DES PRODUITS ARTISANAUX : store permettant aux clients de parcourir et sélectionner les produits artisanaux disponibles,panier pour consulter et gérer les produits ajoutés avant la validation de commande , paiement sécurisé via l’API Stripe et envoi automatique d’un e-mail de confirmation après chaque commande efféctués.
-GESTION DES ÉVÈNEMENTS ET DONS : Organisation d’expositions et dons via STRIPE.
+GESTION DES ÉVÈNEMENTS ET DONS : Organisation d’évènements et dons via STRIPE.
 GESTION DES FORMATIONS ET CERTIFICATS : Cours en présentielle avec certificats en PDF.
 GESTION DES PARTENARIATS ET CANDIDATURES : CRUD pour les partenariats, liste et candidature pour clients (portfolios évalués par HUGGING FACE, motivations analysées par DANDELION), pagination, export PDF/Excel, statistiques (candidatures, partenariats actifs).
 GESTION DES CRÉATIONS ET COMMENTAIRES : Publication d’œuvres avec commentaires.
@@ -68,12 +86,14 @@ Pagination.
 # Rôles des utilisateurs
 
 ADMIN : Gère tous les CRUD pour les utilisateurs, produits, événements, formations, partenariats, et créations.
+
 ARTISAN : 
 -Gère les CRUD des partenariats, les candidatures reçues, et publie des produits artisanaux et créations.
 -suivre les ventes et le chiffres d’affaires grâce à des statistiques interactives et détaillées
 -gestion de stock compléte avec alerte en cas de repture.
 -exportation pdf des commandes
-
+-Publication des Formations et Attribution des certificats.
+-Ajout d’évènements.
 
 
 CLIENT : 
@@ -81,6 +101,9 @@ CLIENT :
 -parcourir et sélectionner les produit artisanaux disponibles.
 -consulter et gérer les commandes  ajoutés dans le panier  avant la validation de commande 
 -Accès à la liste des formations proposées, avec des options de tri et de recherche, et réservation directe via la plateforme.
+-Accès à la liste des évènements proposées, avec des options de tri et de recherche, et Faire des dons directe via la plateforme.
+
+
 
 # TABLE DES MATIÈRES
 
@@ -211,5 +234,5 @@ git commit -m "Ajout de votre-fonctionnalite"
 # LICENCE
 Pas de licence pour notre projet.
 # Mots-clés
-JAVA, JAVAFX, SPRING, HIBERNATE, PYTHON, FLASK, ARTISANAT TUNISIEN, STRIPE PAYMENT API, HUGGING FACE API, DANDELION API, CHATBASE, FACE ID, GOOGLE GEMINI API, EDENAI API, GOOGLE OAUTH, JWT, 2FA, HACHAGE MOT DE PASSE, E-MAIL NOTIFICATION, DÉVELOPPEMENT WEB, ESPRIT SCHOOL OF ENGINEERING, JAVASCRIPT, CSS, SCENE BUILDER, INTELLIJ IDEA, XAMPP, GESTION DES PARTENARIATS, ESPACE PERSONNEL, CHATBOT FRONTEND, EXPORT PDF, STATISTIQUES, PAGINATION, systéme de fidélité,facture,regression lineaire,preduction, chiffre d’affaire,TVA,QR code , modèle 3D , openstreetmap
+JAVA, JAVAFX, SPRING, HIBERNATE, PYTHON, FLASK, ARTISANAT TUNISIEN, STRIPE PAYMENT API, HUGGING FACE API, DANDELION API, CHATBASE, FACE ID, GOOGLE GEMINI API, EDENAI API, GOOGLE OAUTH, JWT, 2FA, HACHAGE MOT DE PASSE, E-MAIL NOTIFICATION, DÉVELOPPEMENT WEB, ESPRIT SCHOOL OF ENGINEERING, JAVASCRIPT, CSS, SCENE BUILDER, INTELLIJ IDEA, XAMPP, GESTION DES PARTENARIATS, ESPACE PERSONNEL, CHATBOT FRONTEND, EXPORT PDF, STATISTIQUES, PAGINATION, systéme de fidélité,facture,regression lineaire,preduction, chiffre d’affaire,TVA,QR code , modèle 3D , openstreetmap, OpenWeatherMap.
 
